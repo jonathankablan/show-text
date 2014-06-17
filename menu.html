@@ -1,0 +1,44 @@
+<!-- 
+	LES TEACHERS DU NET
+	Created by Honoré Hounwanou
+	@ www.youtube.com/hounwanou1993
+	@ www.facebook.com/honore.hounwanou
+	All rights reserved
+	* Date: September 06, 2013
+-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Menu déroulant</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="menu.css" type="text/css"/>
+	</head>
+	<body>
+		<dl>
+			<dt>Qui suis-je ? Veux-tu le savoir ?</dt>
+			<dd>Honoré HOUNWANOU</dd>
+			<dt>Qui suis-je ? Veux-tu le savoir ?</dt>
+			<dd>Honoré HOUNWANOU</dd>
+			<dt>Qui suis-je ? Veux-tu le savoir ?</dt>
+			<dd>Honoré HOUNWANOU</dd>
+			<dt>Qui suis-je ? Veux-tu le savoir ?</dt>
+			<dd>Honoré HOUNWANOU</dd>
+			<dt>Qui suis-je ? Veux-tu le savoir ?</dt>
+			<dd>Honoré HOUNWANOU</dd>
+		<dl>
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			(function(){
+				$('dd').filter(':nth-child(n+4)').hide();
+				$('dl').on('mouseenter', 'dt', function(){
+					$(this)
+						.next()
+							.slideDown(200)
+							.siblings('dd')
+								.slideUp(200);
+				});
+			})();
+		</script>
+	</body>
+</html>
